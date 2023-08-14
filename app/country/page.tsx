@@ -22,8 +22,8 @@ const CountryPage = () => {
   const filtered = data.data.filter((data) => data.name.common === name);
 
   return (
-    <main className="min-h-screen flex flex-col select-none dark:text-white dark:bg-veryDarkBlue">
-      <div className="text-darkModeText lg:pl-16 px-5 py-10 space-y-24">
+    <main className="min-h-screen flex flex-col select-none dark:bg-veryDarkBlue">
+      <div className="text-darkModeText dark:text-white lg:pl-16 px-5 py-10 space-y-24">
         {loading ? (
           <LoadingComponent />
         ) : (
@@ -44,6 +44,7 @@ const CountryPage = () => {
                         className="rounded-sm w-full xl:px-6 px-2"
                         src={c.flags.png}
                         width={200}
+                        height="200"
                         alt="image"
                       />
                     </div>

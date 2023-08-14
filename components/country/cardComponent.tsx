@@ -23,6 +23,7 @@ export function CountryCard({
           className="rounded-sm h-2/3 w-full h-full"
           src={flag}
           width="200"
+          height="200"
           alt="image"
         />
       </Link>
