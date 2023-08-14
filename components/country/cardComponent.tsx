@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface CountryCardProps {
   flag: string;
@@ -18,10 +19,11 @@ export function CountryCard({
   return (
     <div className="flex flex-col dark:bg-darkBlue dark:text-white shadow-2xl w-5/6">
       <Link href={{ pathname: "country", query: { name } }}>
-        <img
+        <Image
           className="rounded-sm h-2/3 w-full h-full"
           src={flag}
-          height="200"
+          width="200"
+          alt="image"
         />
       </Link>
       <div className="px-5 py-12">

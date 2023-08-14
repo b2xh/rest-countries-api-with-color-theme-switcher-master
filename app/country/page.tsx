@@ -7,6 +7,7 @@ import { LoadingComponent } from "@/components/loading/loadingComponent";
 import Link from "next/link";
 import { LiaMapSolid } from "react-icons/lia";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import Image from "next/image";
 
 const CountryPage = () => {
   const { fetchData, loading, data } = store();
@@ -36,12 +37,14 @@ const CountryPage = () => {
             </button>
 
             {filtered.length !== 0
-              ? filtered.map((c) => (
-                  <div className="grid lg:grid-cols-2 grid-cols-1">
+              ? filtered.map((c, i) => (
+                  <div className="grid lg:grid-cols-2 grid-cols-1" key={i}>
                     <div className="pb-3">
-                      <img
+                      <Image
                         className="rounded-sm w-full xl:px-6 px-2"
                         src={c.flags.png}
+                        width={200}
+                        alt="image"
                       />
                     </div>
                     <div className="space-y-10">

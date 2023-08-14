@@ -6,7 +6,6 @@ import { CountryCard } from "@/components/country/cardComponent";
 import { IAPI } from "@/libs/api/types";
 import { AiOutlineSearch } from "react-icons/ai";
 import { LoadingComponent } from "../loading/loadingComponent";
-import { Error404Component } from "../error/404";
 
 export function SearchComponent() {
   const [value, setValue] = useState("");
@@ -56,8 +55,9 @@ export function SearchComponent() {
                 NOT FOUND
               </p>
             ) : (
-              filtredData.map((country) => (
+              filtredData.map((country, i) => (
                 <CountryCard
+                  key={i}
                   flag={country.flags.png}
                   name={country.name.common}
                   population={country.population}
