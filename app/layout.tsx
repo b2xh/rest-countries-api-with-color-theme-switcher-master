@@ -1,7 +1,7 @@
 import { HeaderComponent } from "@/components/header/headerComponent";
-import "./globals.css";
+import { ThemeProvider } from "@/app/theme-provider";
 import type { Metadata } from "next";
-import { ThemeProvider } from "./theme-provider";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title:

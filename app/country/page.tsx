@@ -4,9 +4,9 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { store } from "@/store/stores";
 import { useEffect } from "react";
 import { LoadingComponent } from "@/components/loading/loadingComponent";
-import Link from "next/link";
 import { LiaMapSolid } from "react-icons/lia";
 import { AiOutlineArrowLeft } from "react-icons/ai";
+import Link from "next/link";
 import Image from "next/image";
 import Error from "next/error";
 
